@@ -1,10 +1,13 @@
 .spinner {
-    animation-name: spin;
-    animation-duration: 2000ms;
-    animation-iteration-count: infinite; 
-    animation-timing-function: linear;
+    border: 10px solid #000D29;
+    border-top: 10px solid #F14D49;
+    border-bottom: 10px solid #F14D49;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    animation: spin 2s linear infinite;
 }
 @keyframes spin {
-    from { transform:rotate(0deg); }
-    to {transform:rotate(360deg); }
+    0% { transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
 }
