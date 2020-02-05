@@ -1,8 +1,8 @@
 {
   "name": "Restaurant Roulette",
   "short_name": "RR",
-  "theme_color": "#118cbb",
-  "background_color": "#118cbb",
+  "theme_color": "#118c8b",
+  "background_color": "#118c8b",
   "display": "standalone",
   "Scope": ".",
   "start_url": ".",

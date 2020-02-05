@@ -5,9 +5,7 @@
 // const appAssets = [
 //     'index.html',
 //     'main.js',
-//     'images/flame.png',
 //     'images/logo.png',
-//     'images/sync.png',
 //     'vendor/bootstrap.min.css',
 //     'vendor/jquery.min.js'
 // ];
