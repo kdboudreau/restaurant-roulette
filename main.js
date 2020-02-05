@@ -54,7 +54,7 @@ function update() {
             });
 
             // Inform the SW (if available) of current Giphys
-            if (navigator.serviceWorker) giphyCacheClean(latestGiphys);
+            // if (navigator.serviceWorker) giphyCacheClean(latestGiphys);
         })
 
         // Failure
