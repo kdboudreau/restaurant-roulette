@@ -15,3 +15,28 @@
     0% { transform: rotate(0deg); }
     100% {transform: rotate(360deg); }
 }
+
+input, textarea, select, button {
+    font-family: "Advent Pro Medium";
+    font-size: 16px;
+}
+
+.section-text {
+    font-size: 18px;
+    padding: 16px 0;
+}
+
+.input-label {
+    font-size: 16px;
+    padding: 16px 0;
+}
+
+.input-field {
+    font-size: 16px;
+    border-radius: 4px;
+    background: #FFFFFF;
+    height: 32px;
+    border: 1px solid #b3b3b3;
+    overflow-y: auto;
+    width: 175px;
+}

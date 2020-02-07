@@ -2,4 +2,4 @@
 
 ---
 
-App for those who are indecisive but oh so hungry
+An app for those who are indecisive but oh so hungry
