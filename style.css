@@ -40,3 +40,7 @@ input, textarea, select, button {
     overflow-y: auto;
     width: 175px;
 }
+
+.spinnerBtn {
+    width: 80px;
+}
