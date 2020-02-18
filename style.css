@@ -41,6 +41,10 @@ input, textarea, select, button {
     width: 175px;
 }
 
-.spinnerBtn {
+.main-container {
+    height: 100vh;
+}
+
+.spinner-btn {
     width: 80px;
 }
