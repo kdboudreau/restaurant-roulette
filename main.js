@@ -80,3 +80,26 @@ $('#update a').click(update);
 
 // Update trending giphys on load
 update();
+
+// $('#foodFilters').hide();
+
+function spinTheWheel() {
+    $('.spinner-icon').addClass("clicked");
+    setTimeout(function() {
+        $('.spinner-icon').removeClass("clicked");
+    }, 1000);
+}
+
+$('.ui-btn.ui-filter').click(toggleFilterBtns);
+
+function toggleFilterBtns() {
+    if ($('.food-filters').is(':visible')) {
+        $('.food-filters').hide();
+        $('.filter-buttons :first-child').addClass('ui-btn-a').removeClass('ui-btn-b');
+        $('.filter-buttons :nth-child(2)').addClass('ui-btn-b').removeClass('ui-btn-a');
+    } else {
+        $('.filter-buttons :first-child').addClass('ui-btn-b').removeClass('ui-btn-a');
+        $('.filter-buttons :nth-child(2)').addClass('ui-btn-a').removeClass('ui-btn-b');
+        $('.food-filters').show();
+    }
+}
