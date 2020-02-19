@@ -48,7 +48,7 @@
         </header>
 
         <!-- Main Container -->
-        <main class="main-container container p-1">
+        <main class="main-container">
             <!-- Error Alert -->
             <!-- <div class="alert alert-danger text-center m-1" style="display:none;">
                 Could not update Giphy's
@@ -56,11 +56,15 @@
 
             <!-- Giphys -->
             <!-- <div id="giphys" class="row no-gutters"></div> -->
-            <div class="section-text">I'm feeling picky</div>
-            <div>Filters Here</div>
-            <div class="section-text">I'm feeling hungry! Spin the Wheel!</div>
-            <div>
-                <a class="icon"><img class="spinner-btn" src="images/rouletteBtn.png"></a></div>
+            <div class="filter-buttons">
+                <div class="ui-btn ui-btn-a ui-filter">I'm feeling hungry</div>
+                <div class="ui-btn ui-btn-b ui-filter">I'm feeling picky</div>
+            </div>
+            <div class="ui-filter food-filters" style="display:none;">Filters Here</div>
+            <div class="section-text" style="text-align:center;">Spin the wheel to find out what's for dinner!</div>
+            <a class="spinner-btn" onclick="spinTheWheel();">
+                <img class="spinner-icon" src="images/rouletteBtn.png">
+            </a>
         </main>
         <footer>Powered By Zomato</footer>
     </body>
