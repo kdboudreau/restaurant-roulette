@@ -2,6 +2,11 @@
     background-color: #118C8B;
 }
 
+footer {
+    text-align: center;
+    height: 30px;
+}
+
 .spinner {
     border: 10px solid #000D29;
     border-top: 10px solid #F14D49;
@@ -11,6 +16,7 @@
     width: 35px;
     animation: spin 2s linear infinite;
 }
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% {transform: rotate(360deg); }
@@ -19,6 +25,12 @@
 input, textarea, select, button {
     font-family: "Advent Pro Medium";
     font-size: 16px;
+}
+
+.section-header {
+    font-size: 28px;
+    padding: 16px 0;
+    margin: 0 auto;
 }
 
 .section-text {
@@ -41,10 +53,60 @@ input, textarea, select, button {
     width: 175px;
 }
 
+.ui-btn {
+    font-size: 20px;
+    padding: 2%;
+    text-align: center;
+}
+
+.ui-btn-a {
+    background: #F2746B;
+    color: white;
+    border: 1px solid #F2746B;
+}
+
+.ui-btn-b {
+    background: white;
+    color: #F2746B;
+    border: 1px solid #F2746B;
+    
+}
+
+.ui-filter {
+    display: inline-block;
+}
+
 .main-container {
-    height: 80vh;
+    height: calc(100vh - 100px);
+    padding: 2%;
+}
+
+.filter-buttons {
+    display: flex;
+    width: 100%;
+    padding: 3% 0;
+}
+
+.ui-btn.ui-filter {
+    width: 46%;
+    margin: 0 2%;
+}
+
+.food-filters {
+    text-align: center;
+    display: flex;
+    width: 100%;
 }
 
 .spinner-btn {
-    width: 80px;
+    width: 175px;
+    margin: 0 auto;
+    display: block;
+}
+.spinner-icon {
+    width: inherit;
+}
+
+.spinner-icon.clicked {
+    animation: spin 500ms ease-out 1;
 }
