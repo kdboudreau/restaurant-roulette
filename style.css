@@ -36,6 +36,7 @@ input, textarea, select, button {
 .section-text {
     font-size: 18px;
     padding: 16px 0;
+    color: #118C8B;
 }
 
 .input-label {
@@ -57,6 +58,7 @@ input, textarea, select, button {
     font-size: 20px;
     padding: 2%;
     text-align: center;
+    border-radius: 3px;
 }
 
 .ui-btn-a {
