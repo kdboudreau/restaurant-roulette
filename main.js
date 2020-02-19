@@ -81,7 +81,7 @@ $('#update a').click(update);
 // Update trending giphys on load
 update();
 
-// $('#foodFilters').hide();
+$('.food-filters').hide();
 
 function spinTheWheel() {
     $('.spinner-icon').addClass("clicked");
