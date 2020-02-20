@@ -1,9 +1,13 @@
 @media screen and (max-device-width: 900px) {
     .ui-btn {
         padding: 2%;
+        font-size: 18px;
     }
     .filter-buttons {
         padding: 3% 0;
+    }
+    .navbar img {
+        width: 45px;
     }
 }
 /* 
@@ -14,9 +18,13 @@
 @media screen and (min-device-width: 901px) {
     .ui-btn {
         padding: 1%;
+        font-size: 20px;
     }
     .filter-buttons {
         padding: 1% 0;
+    }
+    .navbar img {
+        width: 60px;
     }
 }
 
@@ -76,7 +84,6 @@ input, textarea, select, button {
 }
 
 .ui-btn {
-    font-size: 20px;
     text-align: center;
     border-radius: 3px;
 }
