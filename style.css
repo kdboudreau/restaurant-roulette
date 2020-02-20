@@ -9,6 +9,9 @@
     .navbar img {
         width: 45px;
     }
+    .spinner-btn {
+        width: 200px;
+    }
 }
 /* 
 @media screen and (min-device-width: 601px) and (max-device-width: 900px) {
@@ -25,6 +28,9 @@
     }
     .navbar img {
         width: 60px;
+    }
+    .spinner-btn {
+        width: 250px;
     }
 }
 
@@ -134,7 +140,6 @@ input, textarea, select, button {
 .spinner-btn {
     margin: 20px auto;
     display: block;
-    width: 250px;
 }
 .spinner-icon {
     width: inherit;
