@@ -81,14 +81,11 @@ $('#update a').click(update);
 // Update trending giphys on load
 update();
 
-$('.food-filters').hide();
 
-function spinTheWheel() {
-    $('.spinner-icon').addClass("clicked");
-    setTimeout(function() {
-        $('.spinner-icon').removeClass("clicked");
-    }, 1000);
-}
+
+
+$('.food-filters').hide();
+$('.selected-eatery').hide();
 
 $('.ui-btn.ui-filter').click(toggleFilterBtns);
 
@@ -102,4 +99,13 @@ function toggleFilterBtns() {
         $('.filter-buttons :nth-child(2)').addClass('ui-btn-a').removeClass('ui-btn-b');
         $('.food-filters').show();
     }
+}
+
+function spinTheWheel() {
+    $('.selected-eatery').hide();
+    $('.spinner-icon').addClass("clicked");
+    setTimeout(function() {
+        $('.spinner-icon').removeClass("clicked");
+        $('.selected-eatery').show();
+    }, 800);
 }
