@@ -1,3 +1,25 @@
+@media screen and (max-device-width: 900px) {
+    .ui-btn {
+        padding: 2%;
+    }
+    .filter-buttons {
+        padding: 3% 0;
+    }
+}
+/* 
+@media screen and (min-device-width: 601px) and (max-device-width: 900px) {
+
+} */
+
+@media screen and (min-device-width: 901px) {
+    .ui-btn {
+        padding: 1%;
+    }
+    .filter-buttons {
+        padding: 1% 0;
+    }
+}
+
 .app-navbar {
     background-color: #118C8B;
 }
@@ -36,7 +58,6 @@ input, textarea, select, button {
 .section-text {
     font-size: 18px;
     padding: 16px 0;
-    color: #118C8B;
 }
 
 .input-label {
@@ -56,7 +77,6 @@ input, textarea, select, button {
 
 .ui-btn {
     font-size: 20px;
-    padding: 2%;
     text-align: center;
     border-radius: 3px;
 }
@@ -71,7 +91,6 @@ input, textarea, select, button {
     background: white;
     color: #F2746B;
     border: 1px solid #F2746B;
-    
 }
 
 .ui-filter {
@@ -83,10 +102,15 @@ input, textarea, select, button {
     padding: 2%;
 }
 
+.main-container > .section-text {
+    padding-top: 0px;
+    text-align: center;
+    color: #118C8B;
+}
+
 .filter-buttons {
     display: flex;
     width: 100%;
-    padding: 3% 0;
 }
 
 .ui-btn.ui-filter {
@@ -101,9 +125,9 @@ input, textarea, select, button {
 }
 
 .spinner-btn {
-    width: 175px;
     margin: 0 auto;
     display: block;
+    width: 300px;
 }
 .spinner-icon {
     width: inherit;
@@ -111,4 +135,10 @@ input, textarea, select, button {
 
 .spinner-icon.clicked {
     animation: spin 500ms ease-out 1;
+}
+
+.selected-eatery {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
