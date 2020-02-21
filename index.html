@@ -54,10 +54,15 @@
                 <div class="ui-btn ui-btn-b ui-filter">I'm feeling picky</div>
             </div>
             <div class="ui-filter food-filters">
-                <select class="selectpicker ui-filter"  title="Cuisine Type" multiple>
-                    <option>Italian</option>
-                    <option>Southern</option>
-                </select>
+                <div id="cuisineDropdownDiv" class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="cuisineDropdown"
+                        aria-haspopup="true" aria-expanded="false">Cuisine Type</button>
+                    <div class="dropdownn-menu ui-filter" aria-labelledby="cuisineDropdown">
+                        <a class="dropdown-item" href="#">Italian</a>
+                        <a class="dropdown-item" href="#">Southern</a>
+                    </div>
+                </div>
+                
                 <select class="selectpicker ui-filter" title="Price" multiple>
                     <option>$</option>
                     <option>$$</option>

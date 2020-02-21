@@ -88,6 +88,7 @@ $('.food-filters').hide();
 $('.selected-eatery').hide();
 
 $('.ui-btn.ui-filter').click(toggleFilterBtns);
+$('#cuisineDropdownDiv').click($('#cuisineDropdownDiv').dropdown('toggle'));
 
 function toggleFilterBtns() {
     if ($('.food-filters').is(':visible')) {
