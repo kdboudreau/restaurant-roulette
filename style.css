@@ -108,6 +108,7 @@ input, textarea, select, button {
 
 .ui-filter {
     display: inline-block;
+    border: 1px solid #F2746B;
 }
 
 .main-container {
