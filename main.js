@@ -15,7 +15,7 @@
 
 // Giphy API object
 var giphy = {
-    url: 'https://api.giphy.com/v1/gifs/trending',
+    url: 'https://api.yelp.com/v3/',
     query: {
         api_key: '54452c59b31e4d14aca213ec76014baa',
         limit: 12
