@@ -1,22 +1,22 @@
-'use strict';
+// 'use strict';
 
-const yelp = require('yelp-fusion');
+// const yelp = require('yelp-fusion');
 
-// Place holder for Yelp Fusion's API Key. Grab them
-// from https://www.yelp.com/developers/v3/manage_app
-const apiKey = 'GZmMnJq0xBxWdtHmpH4-ESYYsljhSHnRxGg6r_NbNkseB_8pHTkkmFvFOcAhB8bYGpZFadW1cGa_KEka02ThfDeqe-8GxwssWTXF2ZGP6g6XkmGXNu4XFpFjGi1UXnYx';
+// // Place holder for Yelp Fusion's API Key. Grab them
+// // from https://www.yelp.com/developers/v3/manage_app
+// const apiKey = 'GZmMnJq0xBxWdtHmpH4-ESYYsljhSHnRxGg6r_NbNkseB_8pHTkkmFvFOcAhB8bYGpZFadW1cGa_KEka02ThfDeqe-8GxwssWTXF2ZGP6g6XkmGXNu4XFpFjGi1UXnYx';
 
-const searchRequest = {
-  term:'Four Barrel Coffee',
-  location: 'san francisco, ca'
-};
+// const searchRequest = {
+//   term:'Four Barrel Coffee',
+//   location: 'san francisco, ca'
+// };
 
-const client = yelp.client(apiKey);
+// const client = yelp.client(apiKey);
 
-client.search(searchRequest).then(response => {
-  const firstResult = response.jsonBody.businesses[0];
-  const prettyJson = JSON.stringify(firstResult, null, 4);
-  console.log(prettyJson);
-}).catch(e => {
-  console.log(e);
-});
+// client.search(searchRequest).then(response => {
+//   const firstResult = response.jsonBody.businesses[0];
+//   const prettyJson = JSON.stringify(firstResult, null, 4);
+//   console.log(prettyJson);
+// }).catch(e => {
+//   console.log(e);
+// });

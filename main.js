@@ -14,12 +14,9 @@
 // }
 
 // Giphy API object
-var giphy = {
+var yelp = {
     url: 'https://api.yelp.com/v3/',
-    query: {
-        api_key: '54452c59b31e4d14aca213ec76014baa',
-        limit: 12
-    }
+    api_key: 'GZmMnJq0xBxWdtHmpH4-ESYYsljhSHnRxGg6r_NbNkseB_8pHTkkmFvFOcAhB8bYGpZFadW1cGa_KEka02ThfDeqe-8GxwssWTXF2ZGP6g6XkmGXNu4XFpFjGi1UXnYx'
 };
 
 // Update trending giphys
@@ -29,29 +26,29 @@ function update() {
    $('#update .icon').toggleClass('d-none');
 
     // Call Giphy API
-    $.get( giphy.url, giphy.query)
+    $.get( yelp.url, yelp.api_key)
 
         // Success
         .done( function (res) {
-
+            console.log("did it!");
             // Empty Element
-            $('#giphys').empty();
+            // $('#giphys').empty();
 
             // Populate array of latest Giphys
-            var latestGiphys = [];
+            // var latestGiphys = [];
 
             // Loop Giphys
-            $.each( res.data, function (i, giphy) {
+            // $.each( res.data, function (i, giphy) {
                 // Add to latest Giphys
-                latestGiphys.push(giphy.images.downsized_large.url);
+                // latestGiphys.push(giphy.images.downsized_large.url);
 
                 // Add Giphy HTML
-                $('#giphys').prepend(
-                    '<div class="col-sm-6 col-md-4 col-lg-3 p-1">' +
-                        '<img class="w-100 img-fluid" src="' + giphy.images.downsized_large.url + '">' +
-                    '</div>'
-                );
-            });
+                // $('#giphys').prepend(
+                //     '<div class="col-sm-6 col-md-4 col-lg-3 p-1">' +
+                //         '<img class="w-100 img-fluid" src="' + giphy.images.downsized_large.url + '">' +
+                //     '</div>'
+                // );
+            // });
 
             // Inform the SW (if available) of current Giphys
             // if (navigator.serviceWorker) giphyCacheClean(latestGiphys);
@@ -68,7 +65,7 @@ function update() {
         .always(function() {
 
             // Re-Toggle refresh state
-            $('#update .icon').toggleClass('d-none');
+            // $('#update .icon').toggleClass('d-none');
         });
 
     // Prevent submission if originates from click
