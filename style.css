@@ -13,10 +13,6 @@
         width: 150px;
     }
 }
-/* 
-@media screen and (min-device-width: 601px) and (max-device-width: 900px) {
-
-} */
 
 @media screen and (min-device-width: 901px) {
     .ui-btn {
@@ -133,8 +129,8 @@ input, textarea, select, button {
 }
 
 .food-filters {
-    text-align: center;
     display: flex;
+    text-align: center;
     width: 100%;
 }
 
