@@ -139,8 +139,8 @@ input, textarea, select, button {
 }
 
 .spinner-btn {
-    margin: 20px auto;
     display: block;
+    margin: 20px auto;
 }
 .spinner-icon {
     width: inherit;
