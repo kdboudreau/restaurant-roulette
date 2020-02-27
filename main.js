@@ -106,3 +106,33 @@ function spinTheWheel() {
         $('.selected-eatery').show();
     }, 800);
 }
+
+
+var Yelp = require('yelp-api-v3');
+
+var yelp = new Yelp({
+  app_id: 'issOlWgKrZBs98IHhmtVgA',
+  app_secret: 'GZmMnJq0xBxWdtHmpH4-ESYYsljhSHnRxGg6r_NbNkseB_8pHTkkmFvFOcAhB8bYGpZFadW1cGa_KEka02ThfDeqe-8GxwssWTXF2ZGP6g6XkmGXNu4XFpFjGi1UXnYx'
+});
+
+// https://github.com/Yelp/yelp-api-v3/blob/master/docs/api-references/businesses-search.md
+yelp.search({term: 'food', location: '90210', price: '1,2,3', limit: 10})
+.then(function (data) {
+    console.log(data);
+})
+.catch(function (err) {
+    console.error(err);
+});
+
+// https://github.com/Yelp/yelp-api-v3/blob/master/docs/api-references/autocomplete.md
+yelp.autocomplete({text: 'Pizz', latitude: 40.71,longitude: 74.00}, callback)
+.then(function (data) { console.log(data); })
+.catch(function (err) { console.error(err);});
+
+// callbacks
+yelp.search({term: 'food', location: '90210', limit: 10}, function(err, data) {
+    if (err) {
+        return console.log(error);
+    }
+    console.log(data);
+});
