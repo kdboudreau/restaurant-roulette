@@ -3,6 +3,10 @@
         padding: 2%;
         font-size: 18px;
     }
+    .ui-filter {
+        padding: 2%;
+        font-size: 18px;
+    }
     .filter-buttons {
         padding: 3% 0;
     }
@@ -16,6 +20,10 @@
 
 @media screen and (min-device-width: 901px) {
     .ui-btn {
+        padding: 1%;
+        font-size: 20px;
+    }
+    .ui-filter {
         padding: 1%;
         font-size: 20px;
     }
@@ -54,7 +62,7 @@ footer {
     100% {transform: rotate(360deg); }
 }
 
-input, textarea, select, button {
+input, textarea, select {
     font-family: "Advent Pro Medium";
     font-size: 16px;
 }
