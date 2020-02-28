@@ -82,7 +82,7 @@ update();
 $('.food-filters').hide();
 $('.selected-eatery').hide();
 
-$('.ui-btn.ui-filter').click(toggleFilterBtns);
+$('.filter-buttons > .ui-btn').click(toggleFilterBtns);
 
 function toggleFilterBtns() {
     if ($('.food-filters').is(':visible')) {

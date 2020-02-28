@@ -112,6 +112,7 @@ input, textarea, select {
 
 .ui-filter {
     display: inline-block;
+    background: #FFFFFF;
     border: 1px solid #F2746B;
 }
 
@@ -131,7 +132,7 @@ input, textarea, select {
     width: 100%;
 }
 
-.ui-btn.ui-filter {
+.filter-buttons > .ui-btn {
     width: 46%;
     margin: 0 2%;
 }
