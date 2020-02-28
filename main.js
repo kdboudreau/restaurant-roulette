@@ -79,11 +79,6 @@ $('#update a').click(update);
 update();
 
 
-
-$(document).ready(function() {
-    $('.selectpicker').selectpicker();
- });
- 
 $('.food-filters').hide();
 $('.selected-eatery').hide();
 
@@ -99,6 +94,11 @@ function toggleFilterBtns() {
         $('.filter-buttons :nth-child(2)').addClass('ui-btn-a').removeClass('ui-btn-b');
         $('.food-filters').show();
     }
+}
+
+function toggleDropdown(element) {
+    //TODO check class of component with id = element
+    //then toggle dropdown
 }
 
 function spinTheWheel() {
