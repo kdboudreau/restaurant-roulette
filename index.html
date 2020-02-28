@@ -33,6 +33,7 @@
 
         <link rel="stylesheet" href="vendor/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
+        <script src="/js/Bootstrap/Select/bootstrap-select.js"></script>
         <script defer src="vendor/jquery.min.js"></script>
         <script defer src="main.js"></script>
         <script defer src="yelpRequest.js"></script>
@@ -64,10 +65,14 @@
                     </div>
                 </div>
                 
-                <select class="selectpicker ui-filter" title="Price" multiple>
-                    <option>$</option>
-                    <option>$$</option>
-                </select>
+                <div id="cuisineDropdownDiv" class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="cuisineDropdown"
+                        aria-haspopup="true" aria-expanded="false">Price</button>
+                    <div class="dropdownn-menu ui-filter" aria-labelledby="cuisineDropdown">
+                        <a class="dropdown-item" href="#">$</a>
+                        <a class="dropdown-item" href="#">$$</a>
+                    </div>
+                </div>
             </div>
 
             <a class="spinner-btn" onclick="spinTheWheel();">

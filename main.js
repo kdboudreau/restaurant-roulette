@@ -80,7 +80,10 @@ update();
 
 
 
-
+$(document).ready(function() {
+    $('.selectpicker').selectpicker();
+ });
+ 
 $('.food-filters').hide();
 $('.selected-eatery').hide();
 
