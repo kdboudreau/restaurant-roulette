@@ -14,28 +14,38 @@
 // }
 
 // Giphy API object
-var yelp = {
+var yelpOld = {
     url: 'https://api.yelp.com/v3/',
     api_key: 'GZmMnJq0xBxWdtHmpH4-ESYYsljhSHnRxGg6r_NbNkseB_8pHTkkmFvFOcAhB8bYGpZFadW1cGa_KEka02ThfDeqe-8GxwssWTXF2ZGP6g6XkmGXNu4XFpFjGi1UXnYx'
 };
 
+const yelp = require('yelp-fusion');
+var config = require('./config');
+const apiKey = config.getApiKey();
+
+const searchRequest = {
+  term:'Four Barrel Coffee',
+  location: 'san francisco, ca'
+};
+
+const client = yelp.client(apiKey);
+
 // Update trending giphys
 function update() {
-
     // Toggle refresh state
    $('#update .icon').toggleClass('d-none');
 
-    // Call Giphy API
-    $.get( yelp.url, yelp.api_key)
-
-        // Success
-        .done( function (res) {
-            console.log("did it!");
-            // Empty Element
-            // $('#giphys').empty();
-
-            // Populate array of latest Giphys
-            // var latestGiphys = [];
+    client.search(searchRequest)
+    .then(response => {
+        const length = response.jsonBody.businesses.length;
+        const index = Math.floor((Math.random() * length) + 1);
+        const randomResult = response.jsonBody.businesses[index];
+        const prettyRandomJson = JSON.stringify(randomResult, null, 4);
+        $(".selected-eatery").html(randomResult.name);
+        console.log(randomResult.name);
+    }).catch(e => {
+        console.log(e);
+    });
 
             // Loop Giphys
             // $.each( res.data, function (i, giphy) {
@@ -52,21 +62,18 @@ function update() {
 
             // Inform the SW (if available) of current Giphys
             // if (navigator.serviceWorker) giphyCacheClean(latestGiphys);
-        })
 
-        // Failure
-        .fail(function(){
-            
-            $('.alert').slideDown();
-            setTimeout( function() { $('.alert').slideUp() }, 2000);
-        })
+        // // Failure
+        // .fail(function(){
+        //     $('.alert').slideDown();
+        //     setTimeout( function() { $('.alert').slideUp() }, 2000);
+        // })
 
         // Complete
-        .always(function() {
-
-            // Re-Toggle refresh state
-            // $('#update .icon').toggleClass('d-none');
-        });
+        // .always(function() {
+        //     // Re-Toggle refresh state
+        //     // $('#update .icon').toggleClass('d-none');
+        // });
 
     // Prevent submission if originates from click
     return false;
@@ -75,13 +82,11 @@ function update() {
 // Manual refresh
 $('#update a').click(update);
 
-// Update trending giphys on load
 update();
 
 
 $('.food-filters').hide();
 $('.selected-eatery').hide();
-// $('.dropdown-menu').hide();
 
 $('.filter-buttons > .ui-btn').click(toggleFilterBtns);
 
@@ -110,33 +115,3 @@ function spinTheWheel() {
         $('.selected-eatery').show();
     }, 800);
 }
-
-
-var Yelp = require('yelp-api-v3');
-
-var yelp = new Yelp({
-  app_id: 'issOlWgKrZBs98IHhmtVgA',
-  app_secret: 'GZmMnJq0xBxWdtHmpH4-ESYYsljhSHnRxGg6r_NbNkseB_8pHTkkmFvFOcAhB8bYGpZFadW1cGa_KEka02ThfDeqe-8GxwssWTXF2ZGP6g6XkmGXNu4XFpFjGi1UXnYx'
-});
-
-// https://github.com/Yelp/yelp-api-v3/blob/master/docs/api-references/businesses-search.md
-yelp.search({term: 'food', location: '90210', price: '1,2,3', limit: 10})
-.then(function (data) {
-    console.log(data);
-})
-.catch(function (err) {
-    console.error(err);
-});
-
-// https://github.com/Yelp/yelp-api-v3/blob/master/docs/api-references/autocomplete.md
-yelp.autocomplete({text: 'Pizz', latitude: 40.71,longitude: 74.00}, callback)
-.then(function (data) { console.log(data); })
-.catch(function (err) { console.error(err);});
-
-// callbacks
-yelp.search({term: 'food', location: '90210', limit: 10}, function(err, data) {
-    if (err) {
-        return console.log(error);
-    }
-    console.log(data);
-});
