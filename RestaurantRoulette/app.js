@@ -35,8 +35,8 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  // res.render('error');
-  app.use(express.static(__dirname + '/views'));
+  res.render('error');
+//   app.use(express.static(__dirname + '/views'));
 });
 
 module.exports = app;
